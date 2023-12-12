@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Cambiar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_actual" label="Contraseña Actual" labelPlacement="floating"
+    placeholder="Ingrese su contraseña actual"></ion-input>
+    </ion-item>
+    <ion-item class="input ion-margin-top">
+      <ion-input [(ngModel)]="mdl_nueva" label="Contraseña Nueva" labelPlacement="floating"
+      placeholder="Ingrese su contraseña nueva"></ion-input>
+      </ion-item>
+      <ion-item class="input ion-margin-top">
+        <ion-input [(ngModel)]="mdl_confirmacion" label="Confirmar Contraseña" labelPlacement="floating"
+        placeholder="Confirme su contraseña"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="cambiarContrasena()" expand="block" class="boton ion-margin-top">Cambiar Contraseña
+        </ion-button>
+
+        <ion-item *ngIf="v_visible" color="warning" class="ion-margin-top ion-text-center">
+          <ion-label> {{v_mensaje}} </ion-label>
+        </ion-item>
+</ion-content>

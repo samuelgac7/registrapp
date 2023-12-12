@@ -1,0 +1,58 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Barcode Scanner</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let barcode of barcodes">
+        <ion-label position="stacked">{{ barcode.format }}</ion-label>
+        <ion-input type="text" [value]="barcode.rawValue"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="scan()" [disabled]="!isSupported">
+        <ion-icon name="scan"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+  <ion-toolbar>
+    <ion-title> Principal </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navegarNuevoProducto()">Nuevo Producto</ion-button>
+      <ion-button (click)="navegarCambiarContrasena()">
+      <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> {{ nombre }} </ion-card-title>
+      <ion-card-subtitle> {{ apellido }} </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ correo }}
+      <p> {{ contrasena2 }} </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let x of lista_productos">
+    <ion-card-header>
+      <ion-card-title> {{ x.nombre }} - ${{ x.precio }} </ion-card-title>
+      <ion-card-subtitle> {{ x.codigo }} </ion-card-subtitle>
+    </ion-card-header>
+
+
+    <ion-card-content>
+    {{ x.descripcion }}
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

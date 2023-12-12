@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>Nuevo Producto</ion-title>
+    <ion-back-button slot="start" defaultHref="principal"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- CAJITAS DE TEXTO -->
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_codigo" label="Código" labelPlacement="floating"
+  placeholder="Código de Producto"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_nombre" label="Nombre" labelPlacement="floating"
+  placeholder="Nombre de Producto"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_descripcion" label="Descripción" labelPlacement="floating"
+  placeholder="Descripción"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_precio" label="Precio" labelPlacement="floating"
+  placeholder="Precio"></ion-input>
+  </ion-item>
+
+  <!-- BOTONES -->
+  <ion-button expand="block" (click)="productoAlmacenar()"> Almacenar </ion-button>
+  </ion-content> 

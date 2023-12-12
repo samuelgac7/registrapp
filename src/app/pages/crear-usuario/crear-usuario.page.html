@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>Crear Usuario</ion-title>
+    <ion-back-button slot="start" defaultHref="login"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- CAJITAS DE TEXTO -->
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_usuario" label="Usuario" labelPlacement="floating"
+  placeholder="Ingrese su usuario"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_contrasena" label="Contraseña" labelPlacement="floating"
+  placeholder="Ingrese su contraseña"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_correo" label="Correo" labelPlacement="floating"
+  placeholder="Ingrese su correo"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_nombre" label="Nombre" labelPlacement="floating"
+  placeholder="Ingrese su nombre"></ion-input>
+  </ion-item>
+  <ion-item class="input ion-margin-top">
+  <ion-input [(ngModel)]="mdl_apellido" label="Apellido" labelPlacement="floating"
+  placeholder="Ingrese su apellido"></ion-input>
+  </ion-item>
+
+  <!-- BOTONES -->
+  <ion-button expand="block" (click)="almacenarUsuario()"> Crear Usuario </ion-button>
+  </ion-content> 
